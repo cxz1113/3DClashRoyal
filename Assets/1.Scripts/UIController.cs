@@ -13,8 +13,6 @@ public class UIController : MonoBehaviour
 
     float curEnergy = 0;
     float maxEnergy = 10;
-    float curDump = 0;
-    float maxDump = 10;
 
     void Start()
     {
@@ -24,24 +22,23 @@ public class UIController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        energyImage.fillAmount = curEnergy / maxEnergy;
-        energyDump.fillAmount = curDump / maxDump;
-        curEnergy += Time.deltaTime;
-        UseEnergey();
-        energyText.text = string.Format("{0}:{1}", (int)energyImage.fillAmount, maxEnergy);
-        if (Input.GetKeyDown(KeyCode.F3))
+        Enegy();
+        energyText.text = string.Format("{0}:{1}", (int)curEnergy, maxEnergy);
+
+        if(Input.GetKeyDown(KeyCode.F3))
         {
-            curDump -= 1f;
             curEnergy -= 1f;
         }
-        
     }
 
-    void UseEnergey()
+    void Enegy()
     {
-        if (curEnergy > curDump)
-        {
-            curDump += 1f;
-        }
+        // energy bar Setting
+        curEnergy += Time.deltaTime;
+        energyImage.fillAmount = curEnergy / maxEnergy;
+
+        float energy = (curEnergy / maxEnergy) * 10f;
+        energy = (float)System.Math.Truncate(energy);
+        energyDump.fillAmount = (energy / 10f) + 0.1f;
     }
 }
