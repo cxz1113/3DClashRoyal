@@ -8,26 +8,40 @@ public class UIController : MonoBehaviour
 {
     [SerializeField] private Image energyDump;
     [SerializeField] private Image energyImage;
-
+    [SerializeField] private TMP_Text energyText;
     float time = 0;
 
     float curEnergy = 0;
     float maxEnergy = 10;
+    float curDump = 0;
+    float maxDump = 10;
 
     void Start()
     {
-        curEnergy = maxEnergy;
-        energyDump.fillAmount = 0.1f;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        time += Time.deltaTime;
-        if(time > 1)
+        energyImage.fillAmount = curEnergy / maxEnergy;
+        energyDump.fillAmount = curDump / maxDump;
+        curEnergy += Time.deltaTime;
+        UseEnergey();
+        energyText.text = string.Format("{0}:{1}", (int)energyImage.fillAmount, maxEnergy);
+        if (Input.GetKeyDown(KeyCode.F3))
         {
-            energyImage.fillAmount += 0.03f;
-            time = 0;
+            curDump -= 1f;
+            curEnergy -= 1f;
+        }
+        
+    }
+
+    void UseEnergey()
+    {
+        if (curEnergy > curDump)
+        {
+            curDump += 1f;
         }
     }
 }
