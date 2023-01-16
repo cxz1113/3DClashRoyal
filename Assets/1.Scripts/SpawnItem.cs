@@ -6,10 +6,11 @@ using UnityEngine.UI;
 public class SpawnItem : MonoBehaviour
 {
     [SerializeField] private Button btn;
-    [SerializeField] private SpawnManager spawn;
+    [SerializeField] SpawnManager spawn;
+    
     void Start()
     {
-        btn.onClick.AddListener(OnSpawn);
+        btn.onClick.AddListener(OnButtonSpawn);
     }
 
     // Update is called once per frame
@@ -18,7 +19,7 @@ public class SpawnItem : MonoBehaviour
         
     }
 
-    public void OnSpawn()
+    void OnButtonSpawn()
     {
         spawn.Spawn();
     }

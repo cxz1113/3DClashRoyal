@@ -14,6 +14,20 @@ public class UIController : MonoBehaviour
     float curEnergy = 0;
     float maxEnergy = 10;
 
+    public bool IsEnergyCheck(int value)
+    {
+        return curEnergy >= value ? true : false;
+    }
+    public float Energy
+    {
+        get { return curEnergy; }
+        set
+        {
+            curEnergy = value;
+            energyImage.fillAmount = curEnergy / maxEnergy;
+            energyText.text = string.Format("{0}:{1}", (int)curEnergy, maxEnergy);
+        }
+    }
     void Start()
     {
         
@@ -23,7 +37,6 @@ public class UIController : MonoBehaviour
     void Update()
     {
         Enegy();
-        energyText.text = string.Format("{0}:{1}", (int)curEnergy, maxEnergy);
 
         if(Input.GetKeyDown(KeyCode.F3))
         {
@@ -34,8 +47,7 @@ public class UIController : MonoBehaviour
     void Enegy()
     {
         // energy bar Setting
-        curEnergy += Time.deltaTime;
-        energyImage.fillAmount = curEnergy / maxEnergy;
+        Energy += Time.deltaTime;
 
         float energy = (curEnergy / maxEnergy) * 10f;
         energy = (float)System.Math.Truncate(energy);
