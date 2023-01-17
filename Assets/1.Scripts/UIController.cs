@@ -47,7 +47,7 @@ public class UIController : MonoBehaviour
     void Enegy()
     {
         // energy bar Setting
-        Energy += Time.deltaTime;
+        
 
         float energy = (curEnergy / maxEnergy) * 10f;
         energy = (float)System.Math.Truncate(energy);

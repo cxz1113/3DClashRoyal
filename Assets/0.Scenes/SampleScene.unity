@@ -3220,6 +3220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiCont: {fileID: 913902843}
+  spawn: {fileID: 1964364519}
   cardCont: {fileID: 8135709645820354336}
 --- !u!4 &1650459000
 Transform:
@@ -4308,5 +4309,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fe342425cc482148915b9c6788d6026, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 19774627090736711, guid: 5606abe48d52a3449b41185b44828874, type: 3}
+  card: {fileID: 6362196991132402922, guid: 5606abe48d52a3449b41185b44828874, type: 3}
   parent: {fileID: 8135709645820354334}

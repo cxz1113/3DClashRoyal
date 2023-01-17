@@ -7,11 +7,10 @@ public class CardController : MonoBehaviour
     [SerializeField] private GameObject card;
     [SerializeField] private Transform parent;
 
-    float time = 0;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-
+        StartCoroutine("CardSpawn");
     }
 
     // Update is called once per frame
@@ -22,7 +21,10 @@ public class CardController : MonoBehaviour
 
     IEnumerator CardSpawn()
     {
-        Instantiate(card, parent);
-        yield return new WaitForSeconds(0.1f);
+        for(int i = 0; i < 4; i++)
+        {
+            Instantiate(card, parent);
+            yield return new WaitForSeconds(1f);
+        }
     }
 }
