@@ -7,13 +7,11 @@ using TMPro;
 public class CardUI : MonoBehaviour
 {
     [SerializeField] private Button btn;
-    [SerializeField] private GameObject delayIcon;
-    [SerializeField] private Image delayImage;
-    [SerializeField] private TMP_Text delayText;
+    [SerializeField] private GameObject cardBackGround;
 
+    
     void Start()
     {
-        delayIcon.SetActive(false);
         btn.onClick.AddListener(OnButtonSpawn);
     }
 
@@ -25,31 +23,12 @@ public class CardUI : MonoBehaviour
 
     void OnButtonSpawn()
     {
-        if(delayImage.IsActive())
-        {
-            return;
-        }
-        delayIcon.SetActive(true);
-        StartCoroutine(DelayImage(3));
-        ControllerManager.Instance.spawn.Spawn();
+        ControllerManager.Instance.spawnCont.Spawn();
+        SetActive(false);
     }
 
-    IEnumerator DelayImage(float delay)
+    public void SetActive(bool isActive)
     {
-        float max = delay;
-        delayText.text = delay.ToString();
-        while(true)
-        {
-            if(delay <= 0)
-            {
-                delayImage.fillAmount = 1f;
-                delayIcon.SetActive(false);
-                break;
-            }
-            delayImage.fillAmount = delay / max;
-            delayText.text = string.Format("{0:0.0}", delay);
-            delay -= 0.1f;
-            yield return new WaitForSeconds(0.1f);
-        }
+        cardBackGround.SetActive(isActive);
     }
 }

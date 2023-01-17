@@ -9,14 +9,13 @@ public class UIController : MonoBehaviour
     [SerializeField] private Image energyDump;
     [SerializeField] private Image energyImage;
     [SerializeField] private TMP_Text energyText;
-    float time = 0;
 
     float curEnergy = 0;
     float maxEnergy = 10;
 
     public bool IsEnergyCheck(int value)
     {
-        return curEnergy >= value ? true : false;
+        return curEnergy <= value ? true : false;
     }
     public float Energy
     {
@@ -47,7 +46,7 @@ public class UIController : MonoBehaviour
     void Enegy()
     {
         // energy bar Setting
-        
+        Energy += Time.deltaTime;
 
         float energy = (curEnergy / maxEnergy) * 10f;
         energy = (float)System.Math.Truncate(energy);
