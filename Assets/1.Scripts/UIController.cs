@@ -22,6 +22,8 @@ public class UIController : MonoBehaviour
         get { return curEnergy; }
         set
         {
+            if (curEnergy > 10f)
+                return;
             curEnergy = value;
             energyImage.fillAmount = curEnergy / maxEnergy;
             energyText.text = string.Format("{0}:{1}", (int)curEnergy, maxEnergy);

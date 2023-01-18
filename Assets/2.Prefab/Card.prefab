@@ -328,6 +328,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   btn: {fileID: 6362196991132402916}
   cardBackGround: {fileID: 6224182293463139744}
+  costText: {fileID: 6362196989008072783}
 --- !u!222 &6362196991132402918
 CanvasRenderer:
   m_ObjectHideFlags: 0

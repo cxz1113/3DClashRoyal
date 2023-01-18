@@ -8,6 +8,7 @@ public class ControllerManager : MonoBehaviour
     public UIController uiCont;
     public SpawnManager spawnCont;
     public CardController cardCont;
+    public DataController dataCont;
     // Start is called before the first frame update
     void Awake() => Instance = this;
 }

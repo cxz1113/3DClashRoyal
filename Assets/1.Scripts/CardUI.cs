@@ -8,28 +8,41 @@ public class CardUI : MonoBehaviour
 {
     [SerializeField] private Button btn;
     [SerializeField] private GameObject cardBackGround;
-    [SerializeField] private NextCard nextCard;
+    [SerializeField] private TMP_Text costText;
 
+    CardData cardData;
+    public int Cost { get; set; }
     void Start()
     {
         btn.onClick.AddListener(OnButtonSpawn);
     }
 
-    // Update is called once per frame
     void Update()
     {
-
+        
     }
-
     void OnButtonSpawn()
     {
-        ControllerManager.Instance.spawnCont.Spawn();
-        SetActive(false);
+        Instantiate(cardData.Cha, transform);
+        Hide(false);
         //nextCard.CardDequeue(true);
     }
 
-    public void SetActive(bool isActive)
+    public CardUI Hide(bool isActive)
     {
         cardBackGround.SetActive(isActive);
+        return this;
+    }
+
+    public CardUI SetCost(int cost)
+    {
+        costText.text = cost.ToString();
+        return this;
+    }
+
+    public CardUI SetCardData(CardData cardData)
+    {
+        this.cardData = cardData;
+        return this;
     }
 }
