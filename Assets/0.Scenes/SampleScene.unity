@@ -824,6 +824,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8135709645820354334}
     m_Modifications:
+    - target: {fileID: 2762038151984718479, guid: 5606abe48d52a3449b41185b44828874, type: 3}
+      propertyPath: nextCard
+      value: 
+      objectReference: {fileID: 2233459533785505728}
+    - target: {fileID: 6224182293463139744, guid: 5606abe48d52a3449b41185b44828874, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6362196989008072781, guid: 5606abe48d52a3449b41185b44828874, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6362196989008072781, guid: 5606abe48d52a3449b41185b44828874, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.69999695
+      objectReference: {fileID: 0}
+    - target: {fileID: 6362196989008072818, guid: 5606abe48d52a3449b41185b44828874, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6362196991132402917, guid: 5606abe48d52a3449b41185b44828874, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1934,6 +1954,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8135709645820354334}
     m_Modifications:
+    - target: {fileID: 2762038151984718479, guid: 5606abe48d52a3449b41185b44828874, type: 3}
+      propertyPath: nextCard
+      value: 
+      objectReference: {fileID: 2233459533785505728}
     - target: {fileID: 6362196991132402917, guid: 5606abe48d52a3449b41185b44828874, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4769,7 +4793,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300116, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
+  m_Sprite: {fileID: 21300096, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5019,7 +5043,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc670c47c5ab7574ba0739c934ec906c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  next: {fileID: 2233459533785505728}
+  CardBackGround: {fileID: 1213011160326643445}
+  nextCard: {fileID: 2233459533785505728}
 --- !u!222 &6946657689764731032
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5131,8 +5156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parent: {fileID: 891519288}
-  nextCard: {fileID: 2233459533785505727}
-  priceText: {fileID: 0}
+  nextCard: {fileID: 2233459533785505728}
   cards:
   - {fileID: 891519292}
   - {fileID: 1902863286}

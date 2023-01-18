@@ -8,8 +8,8 @@ public class CardUI : MonoBehaviour
 {
     [SerializeField] private Button btn;
     [SerializeField] private GameObject cardBackGround;
+    [SerializeField] private NextCard nextCard;
 
-    
     void Start()
     {
         btn.onClick.AddListener(OnButtonSpawn);
@@ -25,6 +25,7 @@ public class CardUI : MonoBehaviour
     {
         ControllerManager.Instance.spawnCont.Spawn();
         SetActive(false);
+        //nextCard.CardDequeue(true);
     }
 
     public void SetActive(bool isActive)
