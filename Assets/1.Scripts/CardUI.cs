@@ -44,12 +44,16 @@ public class CardUI : MonoBehaviour
     void OnButtonSpawn()
     {
         // 카드 생성 및 몬스터 생성
-        Instantiate(cardData.Cha, parent);
+        MySpawn();
         Enable(false);
         Empty = true;
         ControllerManager.Instance.cardCont.Invoke("AddCard", 1f);
     }
 
+    void MySpawn()
+    {
+        Instantiate(cardData.Cha, parent);
+    }
     public CardUI Enable(bool isActive)
     {
         cardBackGround.SetActive(isActive);        
