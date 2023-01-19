@@ -6,7 +6,6 @@ public class ControllerManager : MonoBehaviour
 {
     public static ControllerManager Instance;
     public UIController uiCont;
-    public SpawnManager spawnCont;
     public CardController cardCont;
     public DataController dataCont;
     // Start is called before the first frame update

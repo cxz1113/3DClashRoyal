@@ -8,8 +8,6 @@ public class CardController : MonoBehaviour
     [SerializeField] private Transform parent;
     [SerializeField] private NextCard nextCard;
     public List<CardUI> cards = new List<CardUI>();
-    public int Index { get; set; }
-    // Start is called before the first frame update
     void Start()
     {
         StartCoroutine("CardSpawn");
@@ -17,20 +15,29 @@ public class CardController : MonoBehaviour
 
     IEnumerator CardSpawn()
     {
+        // 카드 생성
         for(int i = 0; i < cards.Count; i++)
         {
-            cards[i].Hide(true);
-            cards[i].SetCost(i).SetCardData(nextCard.CardDequeue());
+            cards[i].Enable(true)
+            .SetParent(parent)
+            .SetCardData(nextCard.CardDequeue());
             yield return new WaitForSeconds(1f);
         }
-        InvokeRepeating("AddCard", 1f, 1f);
     }
 
     public void AddCard()
     {
+        // 카드 비었을때 재생성
         for(int i = 0; i < cards.Count; i++)
         {
-            
+            if(cards[i].Empty)
+            {
+                cards[i].Enable(true)
+               .SetParent(parent)
+               .SetCardData(nextCard.CardDequeue());
+                cards[i].Empty = false;
+                break;
+            }
         }
     }
 }

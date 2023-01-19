@@ -16,18 +16,14 @@ public class NextCard : MonoBehaviour
         {
             CardEnqueue();
         }
-        InvokeRepeating("CardEnqueue", 0.1f, 0.1f);
-    }
-
-    void Update()
-    {
-        
+        InvokeRepeating("CardEnqueue", 0f, 0.5f);
     }
 
     void CardEnqueue()
     {
-        if (nextCardGroup.Count >= 4)
+        if (nextCardGroup.Count >= 5)
             return;
+
         int rand = Random.Range(0, ControllerManager.Instance.dataCont.datas.Length - 1);
         CardData so = ControllerManager.Instance.dataCont.datas[rand];
         nextCardGroup.Enqueue(so);

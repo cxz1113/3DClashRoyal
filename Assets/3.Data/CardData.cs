@@ -6,7 +6,7 @@ using UnityEngine;
 public class CardData : ScriptableObject
 {
     [SerializeField] Character character;
-    public Character Cha { get { return Cha; } }
+    public Character Cha { get { return character; } }
 
     [SerializeField] int speed;
     public int Speed { get { return speed; } }

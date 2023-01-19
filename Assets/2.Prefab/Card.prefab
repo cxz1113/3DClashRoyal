@@ -74,7 +74,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6362196989008072818}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -328,6 +328,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   btn: {fileID: 6362196991132402916}
   cardBackGround: {fileID: 6224182293463139744}
+  parent: {fileID: 0}
   costText: {fileID: 6362196989008072783}
 --- !u!222 &6362196991132402918
 CanvasRenderer:
