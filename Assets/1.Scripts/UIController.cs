@@ -15,7 +15,7 @@ public class UIController : MonoBehaviour
 
     public bool IsEnergyCheck(int value)
     {
-        return curEnergy <= value ? true : false;
+        return curEnergy >= value ? true : false;
     }
     public float Energy
     {

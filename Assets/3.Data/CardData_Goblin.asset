@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: -6709014815196591310, guid: f73ea324deba02d4daced250f7868d75, type: 3}
   speed: 2
-  cost: 2
+  cost: 1
