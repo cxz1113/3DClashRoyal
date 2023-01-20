@@ -247,12 +247,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3205069565561916303}
   m_LocalRotation: {x: -0.50000036, y: 0.49999964, z: 0.49999964, w: 0.50000036}
-  m_LocalPosition: {x: 0.00000006606153, y: 0.36047828, z: -0.048188195}
-  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
+  m_LocalPosition: {x: 0, y: 0.36047828, z: -0.048188195}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3205069565561952133}
-  m_Father: {fileID: 3205069565561952253}
+  m_Father: {fileID: 5838528319926004920}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3205069565561916305
@@ -891,7 +891,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3205069565561952253}
+  m_Father: {fileID: 5838528319926004920}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &3205069565556639373
@@ -973,11 +973,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3205069565561916379}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.000000004824371, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3205069565561952253}
+  m_Father: {fileID: 5838528319926004920}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &3205069565556639375
@@ -1072,10 +1072,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3205069565561952253}
+  - component: {fileID: 5838528319926004920}
   - component: {fileID: -6709014815196591310}
   - component: {fileID: 3205069565552408655}
   - component: {fileID: 7642436807793354654}
+  - component: {fileID: 431655125306689153}
   m_Layer: 0
   m_Name: Goblin
   m_TagString: Untagged
@@ -1083,8 +1084,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3205069565561952253
-Transform:
+--- !u!224 &5838528319926004920
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1101,6 +1102,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &-6709014815196591310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1115,6 +1121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 7642436807793354654}
   animator: {fileID: 3205069565552408655}
+  image: {fileID: 0}
 --- !u!95 &3205069565552408655
 Animator:
   serializedVersion: 5
@@ -1157,6 +1164,14 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!222 &431655125306689153
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3205069565561916381}
+  m_CullTransparentMesh: 1
 --- !u!1 &3205069565561916383
 GameObject:
   m_ObjectHideFlags: 0

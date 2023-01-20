@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class CardController : MonoBehaviour
 {
     [SerializeField] private Transform parent;
     [SerializeField] private NextCard nextCard;
+    Image image;
     public List<CardUI> cards = new List<CardUI>();
     void Start()
     {

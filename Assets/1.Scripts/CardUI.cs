@@ -10,6 +10,7 @@ public class CardUI : MonoBehaviour
     [SerializeField] private GameObject cardBackGround;
     [SerializeField] private Transform parent;
     [SerializeField] private TMP_Text costText;
+    [SerializeField] private Image image;
     CardData cardData;
     public int Cost { get; set; }
     public bool Empty { get; set; }
@@ -54,6 +55,7 @@ public class CardUI : MonoBehaviour
         ControllerManager.Instance.cardCont.Invoke("AddCard", 1f);
     }
 
+
     public CardUI Enable(bool isActive)
     {
         cardBackGround.SetActive(isActive);        
@@ -69,6 +71,7 @@ public class CardUI : MonoBehaviour
     public CardUI SetCardData(CardData cardData)
     {
         this.cardData = cardData;
+        image.sprite = cardData.Sprite;
         Cost = this.cardData.Cost;
         Empty = false;
         return this;

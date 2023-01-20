@@ -7,6 +7,7 @@ using TMPro;
 public class NextCard : MonoBehaviour
 {
     [SerializeField] private TMP_Text costText;
+    [SerializeField] private Image image;
     public Queue<CardData> nextCardGroup = new Queue<CardData>();
 
     CardData nextCard = null;
@@ -15,7 +16,7 @@ public class NextCard : MonoBehaviour
         // 큐를 이용하여 카드 데이터 생성
         for(int i = 0; i < 5; i++)
         {
-            int rand = Random.Range(0, ControllerManager.Instance.dataCont.datas.Length - 1);
+            int rand = Random.Range(0, ControllerManager.Instance.dataCont.datas.Length);
             CardData card = ControllerManager.Instance.dataCont.datas[rand];
             nextCardGroup.Enqueue(card);
         }
@@ -33,8 +34,9 @@ public class NextCard : MonoBehaviour
         if (nextCardGroup.Count >= 5)
             return;
 
-        int rand = Random.Range(0, ControllerManager.Instance.dataCont.datas.Length - 1);
+        int rand = Random.Range(0, ControllerManager.Instance.dataCont.datas.Length);
         CardData card = ControllerManager.Instance.dataCont.datas[rand];
+        image.sprite = nextCard.Sprite;
         //costText.text = card.Cost.ToString();
         nextCardGroup.Enqueue(card);
     }

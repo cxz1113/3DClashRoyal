@@ -586,7 +586,6 @@ MonoBehaviour:
   datas:
   - {fileID: 11400000, guid: d92b991a69f1a74469af9806051604f4, type: 2}
   - {fileID: 11400000, guid: 0f3960b9a4f632845952d6cca3268e03, type: 2}
-  - {fileID: 11400000, guid: f8da678e49e44d84ab480f5fb299ded9, type: 2}
   - {fileID: 11400000, guid: 39f57f7577e346944a4fb6936faec5cb, type: 2}
   - {fileID: 11400000, guid: 3a3046216a25e7e4286cc4bcaee8d50e, type: 2}
 --- !u!4 &218798055
@@ -5025,6 +5024,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   costText: {fileID: 2233459533124848410}
+  image: {fileID: 2233459532529919727}
 --- !u!222 &6946657689764731032
 CanvasRenderer:
   m_ObjectHideFlags: 0
