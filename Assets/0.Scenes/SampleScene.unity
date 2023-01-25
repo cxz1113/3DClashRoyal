@@ -788,7 +788,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c06f86e032fa144842bb8c8d31106b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHp: 5000
+  maxHp: 1000
   hpImage: {fileID: 1495644727}
 --- !u!1 &279402346
 GameObject:
@@ -1880,7 +1880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c06f86e032fa144842bb8c8d31106b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHp: 5000
+  maxHp: 0
   hpImage: {fileID: 1473700725}
 --- !u!1 &733651262
 GameObject:
@@ -2411,7 +2411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c06f86e032fa144842bb8c8d31106b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHp: 2500
+  maxHp: 0
   hpImage: {fileID: 308598042}
 --- !u!1001 &1091018182
 PrefabInstance:
@@ -2791,7 +2791,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c06f86e032fa144842bb8c8d31106b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHp: 2500
+  maxHp: 500
   hpImage: {fileID: 84778809}
 --- !u!1001 &1435755745
 PrefabInstance:
@@ -3907,7 +3907,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c06f86e032fa144842bb8c8d31106b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHp: 2500
+  maxHp: 0
   hpImage: {fileID: 2032951716}
 --- !u!1 &1711578585
 GameObject:
@@ -4688,7 +4688,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c06f86e032fa144842bb8c8d31106b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHp: 2500
+  maxHp: 500
   hpImage: {fileID: 2042271344}
 --- !u!1 &1213011160326643445
 GameObject:

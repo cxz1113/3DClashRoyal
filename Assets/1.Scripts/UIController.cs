@@ -9,7 +9,7 @@ public class UIController : MonoBehaviour
     [SerializeField] private Image energyDump;
     [SerializeField] private Image energyImage;
     [SerializeField] private TMP_Text energyText;
-
+    
     float curEnergy = 0;
     float maxEnergy = 10;
 
