@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4fa567d21858b44e970ef46c03e47a1, type: 3}
+  m_Name: CardData_WonderWoman
+  m_EditorClassIdentifier: 
+  character: {fileID: 7779986814386575949, guid: 1a0f419e96fafff4d8b64a0bb0e2b46c, type: 3}
+  sprite: {fileID: 21300094, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
+  speed: 1
+  cost: 5
+  damage: 15
+  attDelay: 2

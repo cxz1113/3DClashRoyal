@@ -13,8 +13,9 @@ public abstract class Character : MonoBehaviour
     public CharacterData charData = new CharacterData();
     public NavMeshAgent agent;
     public Animator animator;
-    //public CardData cardData;
+    public CardData cardData;
 
+    float attDelay = 0;
     // Update is called once per frame
     void Update()
     {
@@ -51,6 +52,18 @@ public abstract class Character : MonoBehaviour
             animator.SetTrigger("idle");
             agent.SetDestination(transform.position);
             animator.SetTrigger("attack");
+            if(attDelay > cardData.AttDelay)
+            {
+                attDelay = 0;
+                if(findTarget.GetComponent<Castle>() != null)
+                {
+                    findTarget.GetComponent<Castle>().HP -= cardData.Damage;
+                }
+                else if(findTarget.GetComponent<Character>())
+                {
+
+                }
+            }
         }
     }
 }

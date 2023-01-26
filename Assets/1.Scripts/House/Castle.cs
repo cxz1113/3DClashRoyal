@@ -6,14 +6,27 @@ using UnityEngine.UI;
 
 public class Castle : MonoBehaviour
 {
-    public float MaxHp;
+    [SerializeField] private float maxHp;
     private float curHP;
 
     [SerializeField] private Image hpImage;
     
+    public float HP
+    {
+        get { return curHP; }
+        set
+        {
+            curHP = value;
+            hpImage.fillAmount = curHP / maxHp;
+            if(curHP <= 0)
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
     void Start()
     {
-        curHP = MaxHp;
+        curHP = maxHp;
     }
 
     void Update()
@@ -22,7 +35,7 @@ public class Castle : MonoBehaviour
         {
             curHP -= 100;
         }
-        hpImage.fillAmount = curHP / MaxHp;
+        hpImage.fillAmount = curHP / maxHp;
 
         if(Input.GetKeyDown(KeyCode.F2))
         {
