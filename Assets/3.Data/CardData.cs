@@ -12,6 +12,9 @@ public class CardData : ScriptableObject
     [SerializeField] Sprite sprite;
     public Sprite Sprite { get { return sprite; } }
 
+    [SerializeField] float hp;
+    public float HP { get { return hp; } }
+            
     [SerializeField] int speed;
     public int Speed { get { return speed; } }
 
@@ -23,4 +26,10 @@ public class CardData : ScriptableObject
 
     [SerializeField] float attDelay;
     public float AttDelay { get { return attDelay; } }
+
+    [SerializeField] float attRange;
+    public float AttRange { get { return attRange; } }
+
+    [SerializeField] bool pawn;
+    public bool Pawn { get; set; } 
 }

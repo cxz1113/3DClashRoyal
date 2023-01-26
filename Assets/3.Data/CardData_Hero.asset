@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 6798255082104201403, guid: bd69a7f3534195640bdbb620cc3b4db4, type: 3}
   sprite: {fileID: 21300058, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
+  hp: 150
   speed: 1
   cost: 4
   damage: 10
   attDelay: 2
+  attRange: 1.5
+  pawn: 0

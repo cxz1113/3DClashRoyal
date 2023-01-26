@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4fa567d21858b44e970ef46c03e47a1, type: 3}
+  m_Name: CardData_Warrior 2
+  m_EditorClassIdentifier: 
+  character: {fileID: 8624299982980534736, guid: 617dbfdcb4dcf1c47b7133b8a7026499, type: 3}
+  sprite: {fileID: 21300052, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
+  hp: 50
+  speed: 15
+  cost: 3
+  damage: 12
+  attDelay: 1.5
+  attRange: 1.5
+  pawn: 0

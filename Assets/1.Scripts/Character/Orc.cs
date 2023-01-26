@@ -6,7 +6,6 @@ public class Orc : Character
 {
     void Start()
     {
-        charData.attRange = .5f;
-        charData.findTag = "enemy";
+        
     }
 }  

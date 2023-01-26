@@ -48,6 +48,7 @@ public class CardUI : MonoBehaviour
         if(ControllerManager.Instance.uiCont.IsEnergyCheck(cardData.Cost) == true)
         {
             ControllerManager.Instance.uiCont.Energy -= cardData.Cost;
+            cardData.Pawn = true;
             Instantiate(cardData.Cha, parent);
             Enable(false);
             Empty = true;

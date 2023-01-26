@@ -7,7 +7,9 @@ public class Hero : Character
     // Start is called before the first frame update
     void Start()
     {
-        charData.attRange = 1.5f;
-        charData.findTag = "enemy";
+        if (cardData.Pawn)
+            charData.findTag = "enemy";
+        else
+            charData.findTag = "my";
     }
 }
