@@ -29,7 +29,4 @@ public class CardData : ScriptableObject
 
     [SerializeField] float attRange;
     public float AttRange { get { return attRange; } }
-
-    [SerializeField] bool pawn;
-    public bool Pawn { get; set; } 
 }

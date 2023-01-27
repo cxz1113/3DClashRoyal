@@ -6,17 +6,25 @@ public class EnemySpawnManager : MonoBehaviour
 {
     
     [SerializeField] private Transform parent;
-    List<CardData> cardDatas = new List<CardData>();
+    float spawnDelay = 0;
     CardData cardData;
     // Update is called once per frame
     void Update()
     {
-        EnemySpawn();
+        spawnDelay += Time.deltaTime;
+        if(spawnDelay > 5)
+        {
+            spawnDelay = 0;
+            EnemySpawn();
+        }
     }
 
     void EnemySpawn()
     {
-        Character character = Instantiate(cardData.Cha, parent);
-        cardData.Pawn = false;
+        int rand = Random.Range(0, ControllerManager.Instance.dataCont.datas.Length);
+        Character character = Instantiate(ControllerManager.Instance.dataCont.datas[rand].Cha, parent);
+        character.cardData = ControllerManager.Instance.dataCont.datas[rand];
+        character.tag = "enemy";
+        character.charData.findTag = "my";
     }
 }

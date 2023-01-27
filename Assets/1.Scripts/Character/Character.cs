@@ -19,23 +19,12 @@ public abstract class Character : MonoBehaviour
     float maxHP = 0;
     float attDelay = 0;
 
-    public float HP
+    public virtual void Initialize()
     {
-        get { return curHP; }
-        set
-        {
-            curHP = value;
-            hpImage.fillAmount = curHP / maxHP;
-            if(curHP <= 0)
-            {
-                Destroy(gameObject);
-            }
-        }
-    }
-    void Start()
-    {
+        curHP = cardData.HP;
         maxHP = cardData.HP;
     }
+
     // Update is called once per frame
     void Update()
     {
@@ -45,7 +34,7 @@ public abstract class Character : MonoBehaviour
             if (characters.Length == 0)
                 return;
 
-            float distance = 100f;
+            float distance = 50f;
             GameObject findTarget = null;
             foreach (var character in characters)
             {
@@ -72,10 +61,12 @@ public abstract class Character : MonoBehaviour
             {
                 animator.SetTrigger("idle");
                 agent.SetDestination(transform.position);
+                transform.LookAt(findTarget.transform);
                 animator.SetTrigger("attack");
                 attDelay += Time.deltaTime;
                 if (attDelay > cardData.AttDelay)
                 {
+                    // attDelay를 Time.delta 이용하여 HP빼기
                     attDelay = 0;
                     if (findTarget.GetComponent<Castle>())
                     {
@@ -83,10 +74,23 @@ public abstract class Character : MonoBehaviour
                     }
                     else if (findTarget.GetComponent<Character>())
                     {
-                        findTarget.GetComponent<Character>().HP -= cardData.Damage;
+                        findTarget.GetComponent<Character>().Damage(cardData.Damage);
                     }
                 }
             }
+        }
+    }
+
+    public void Damage(float damage)
+    {
+        if (curHP <= 0)
+            return;
+        curHP -= damage;
+        hpImage.fillAmount = curHP / maxHP;
+        // hp가 0일때 이벤트
+        if(curHP <= 0)
+        {
+            Destroy(gameObject);
         }
     }
 }

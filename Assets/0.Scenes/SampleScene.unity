@@ -106,7 +106,7 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.2
+    agentRadius: 0.1
     agentHeight: 2
     agentSlope: 45
     agentClimb: 0.4
@@ -114,7 +114,7 @@ NavMeshSettings:
     maxJumpAcrossDistance: 0
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.06666667
+    cellSize: 0.033333335
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
@@ -584,8 +584,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   datas:
-  - {fileID: 11400000, guid: e1e346f53b1e90e41b3b803d8d74ffa0, type: 2}
+  - {fileID: 11400000, guid: 0f3960b9a4f632845952d6cca3268e03, type: 2}
   - {fileID: 11400000, guid: 36d5f15f325c7a24db48457d7fe09beb, type: 2}
+  - {fileID: 11400000, guid: e1e346f53b1e90e41b3b803d8d74ffa0, type: 2}
   - {fileID: 11400000, guid: f9d7ceaeb74a6064cbe8616d177c321e, type: 2}
   - {fileID: 11400000, guid: 3660a9701b7a76349b77d4c8ce8f83e1, type: 2}
   - {fileID: 11400000, guid: e2e8284a531e46f438d131de443408aa, type: 2}
@@ -770,7 +771,7 @@ Transform:
   m_GameObject: {fileID: 275835627}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 1.6, z: 0.3}
-  m_LocalScale: {x: 0.01666667, y: 0.1, z: 0.010000001}
+  m_LocalScale: {x: 0.013, y: 0.1, z: 0.010000001}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1938449232}
@@ -1907,7 +1908,7 @@ Transform:
   m_GameObject: {fileID: 711666482}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: -1}
   m_LocalPosition: {x: 0, y: 1.6, z: -0.3}
-  m_LocalScale: {x: 0.01666667, y: 0.1, z: 0.010000001}
+  m_LocalScale: {x: 0.013, y: 0.1, z: 0.010000001}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 139257881}

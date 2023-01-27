@@ -19,9 +19,10 @@ public class CardController : MonoBehaviour
         // 카드 생성
         for(int i = 0; i < cards.Count; i++)
         {
-            cards[i].Enable(true)
-            .SetParent(parent)
-            .SetCardData(nextCard.CardDequeue());
+            cards[i]
+                .Enable(true)
+                .SetParent(parent)
+                .SetCardData(nextCard.CardDequeue());
             yield return new WaitForSeconds(1f);
         }
     }
@@ -33,9 +34,10 @@ public class CardController : MonoBehaviour
         {
             if(cards[i].Empty)
             {
-                cards[i].Enable(true)
-               .SetParent(parent)
-               .SetCardData(nextCard.CardDequeue());
+                cards[i]
+                    .Enable(true)
+                    .SetParent(parent)
+                    .SetCardData(nextCard.CardDequeue());
                 cards[i].Empty = false;
                 break;
             }

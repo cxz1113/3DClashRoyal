@@ -19,4 +19,4 @@ MonoBehaviour:
   cost: 1
   damage: 5
   attDelay: 1.5
-  pawn: 0
+  attRange: 1.2

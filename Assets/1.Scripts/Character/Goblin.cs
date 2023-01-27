@@ -7,6 +7,6 @@ public class Goblin : Character
 {
     void Start()
     {
-        
+        Initialize();
     }
 }

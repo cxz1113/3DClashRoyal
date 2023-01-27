@@ -48,10 +48,13 @@ public class CardUI : MonoBehaviour
         if(ControllerManager.Instance.uiCont.IsEnergyCheck(cardData.Cost) == true)
         {
             ControllerManager.Instance.uiCont.Energy -= cardData.Cost;
-            cardData.Pawn = true;
-            Instantiate(cardData.Cha, parent);
+            Character character = Instantiate(cardData.Cha, parent);
+            character.cardData = cardData;
+            character.tag = "my";
+            character.charData.findTag = "enemy";
             Enable(false);
             Empty = true;
+           
         }        
         ControllerManager.Instance.cardCont.Invoke("AddCard", 1f);
     }
@@ -73,7 +76,7 @@ public class CardUI : MonoBehaviour
     {
         this.cardData = cardData;
         image.sprite = cardData.Sprite;
-        Cost = this.cardData.Cost;
+        Cost = cardData.Cost;
         Empty = false;
         return this;
     }

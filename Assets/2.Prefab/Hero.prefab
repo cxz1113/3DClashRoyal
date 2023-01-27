@@ -520,7 +520,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1312545459822700447}
-  - component: {fileID: 6798255082104201403}
+  - component: {fileID: 1948118752038162186}
   - component: {fileID: 1566584551449109668}
   - component: {fileID: 5673807148191437553}
   m_Layer: 0
@@ -551,7 +551,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6798255082104201403
+--- !u!114 &1948118752038162186
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -560,13 +560,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1836564336814390565}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 230e61c2e545a0b48af7f01aa9260c72, type: 3}
+  m_Script: {fileID: 11500000, guid: 4a89c37dae4822f468055f60c1a394cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hpImage: {fileID: 5225480006913464635}
   agent: {fileID: 5673807148191437553}
   animator: {fileID: 1566584551449109668}
-  cardData: {fileID: 11400000, guid: 3660a9701b7a76349b77d4c8ce8f83e1, type: 2}
+  cardData: {fileID: 0}
 --- !u!95 &1566584551449109668
 Animator:
   serializedVersion: 5
