@@ -53,8 +53,7 @@ public class CardUI : MonoBehaviour
             character.tag = "my";
             character.charData.findTag = "enemy";
             Enable(false);
-            Empty = true;
-           
+            Empty = true;           
         }        
         ControllerManager.Instance.cardCont.Invoke("AddCard", 1f);
     }

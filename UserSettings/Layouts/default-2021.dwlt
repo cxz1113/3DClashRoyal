@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Inspector
   m_RootView: {fileID: 4}
   m_MinSize: {x: 875, y: 321}
   m_MaxSize: {x: 10000, y: 10000}
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 107
+  controlID: 30
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -151,7 +151,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 61
+  controlID: 140
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -269,8 +269,8 @@ MonoBehaviour:
     y: 0
     width: 349
     height: 947
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -296,8 +296,8 @@ MonoBehaviour:
     y: 0
     width: 897
     height: 486
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -322,8 +322,8 @@ MonoBehaviour:
     y: 486
     width: 897
     height: 461
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -416,23 +416,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 3632feff4032feff0633feffd097feffbabbfeff548effff9e8fffff40d10000aed1000038d200008ed20000b2d20000
+      m_SelectedIDs: 16d20000
+      m_LastClickedID: 53782
+      m_ExpandedIDs: 708effffac8fffff48d100009cd10000b6d10000bad20000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Goblin
-        m_OriginalName: Goblin
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -92208
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 9}
       m_SearchString: 
@@ -523,7 +523,8 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SkipHidden: 0
     m_SearchArea: 1
-    m_Folders: []
+    m_Folders:
+    - Assets/3.Data
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 0
@@ -565,21 +566,21 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff0000000004d1000026d1000028d100002ad100002cd100002ed1000032d100005ed60000
+    m_ExpandedIDs: ffffffff0cd100002ed1000030d1000032d1000034d10000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Warrior
-      m_OriginalName: Warrior
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 54064
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_SearchString: 
@@ -833,7 +834,7 @@ MonoBehaviour:
       containerId: overlay-container--right
       floating: 0
       collapsed: 0
-      displayed: 0
+      displayed: 1
       snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
@@ -971,9 +972,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.0684716, y: 4.111637, z: 2.2307932}
+    m_Target: {x: -2.0783691, y: 9.806244, z: -7.0698867}
     speed: 2
-    m_Value: {x: -1.0684716, y: 4.111637, z: 2.2307932}
+    m_Value: {x: -2.0783691, y: 9.806244, z: -7.0698867}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1020,13 +1021,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.66359645, y: 0.08465629, z: -0.0759848, w: 0.7394366}
+    m_Target: {x: 0.47940785, y: 0.035542842, z: -0.019393042, w: 0.8767169}
     speed: 2
-    m_Value: {x: 0.6635742, y: 0.08465345, z: -0.07598225, w: 0.73941183}
+    m_Value: {x: 0.47935337, y: 0.036855966, z: -0.020111088, w: 0.87661713}
   m_Size:
-    m_Target: 0.77792317
+    m_Target: 4.210784
     speed: 2
-    m_Value: 0.77792317
+    m_Value: 4.210784
   m_Ortho:
     m_Target: 0
     speed: 2

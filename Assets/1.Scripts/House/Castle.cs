@@ -21,6 +21,11 @@ public class Castle : MonoBehaviour
             if(curHP <= 0)
             {
                 Destroy(gameObject);
+                if(gameObject.name.Equals("MainHouse"))
+                {
+                    Time.timeScale = 0;
+                    Debug.Log("Stage Clear!!");
+                }
             }
         }
     }

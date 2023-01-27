@@ -42,7 +42,7 @@ public abstract class Character : MonoBehaviour
                 // 거리값 계산
                 float dis = Vector3.Distance(agent.transform.position, character.transform.position);
                 if (distance > dis)
-                {
+                { 
                     findTarget = character;
                     distance = dis;
                 }
