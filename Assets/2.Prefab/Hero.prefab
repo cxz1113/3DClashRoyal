@@ -523,6 +523,7 @@ GameObject:
   - component: {fileID: 1948118752038162186}
   - component: {fileID: 1566584551449109668}
   - component: {fileID: 5673807148191437553}
+  - component: {fileID: -2771117833590848623}
   m_Layer: 0
   m_Name: Hero
   m_TagString: Untagged
@@ -596,7 +597,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1836564336814390565}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.1
   m_Speed: 1
   m_Acceleration: 8
   avoidancePriority: 50
@@ -609,6 +610,19 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!65 &-2771117833590848623
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836564336814390565}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2067390315432251654
 GameObject:
   m_ObjectHideFlags: 0
