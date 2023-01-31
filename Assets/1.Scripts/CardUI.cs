@@ -95,6 +95,11 @@ public class CardUI : MonoBehaviour, IDragHandler, IDropHandler
 
     public void OnDrop(PointerEventData eventData)
     {
+        if(hit.transform == null)
+        {
+            StartCoroutine("CardPosInit");
+            return;
+        }
         if(ControllerManager.Instance.uiCont.IsEnergyCheck(cardData.Cost)  == true)
         {
             if(hit.transform.tag.Equals("ray"))

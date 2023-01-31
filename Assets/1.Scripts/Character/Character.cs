@@ -34,7 +34,7 @@ public abstract class Character : MonoBehaviour
             if (characters.Length == 0)
                 return;
 
-            float distance = 50f;
+            float distance = 100f;
             GameObject findTarget = null;
             foreach (var character in characters)
             {
