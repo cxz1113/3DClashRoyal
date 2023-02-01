@@ -10,6 +10,12 @@ public class Castle : MonoBehaviour
     private float curHP;
 
     [SerializeField] private Image hpImage;
+    [SerializeField] private GameObject prefab;
+    [SerializeField] private Transform parent;
+
+    float attackDelay = 3f;
+    float attacTime = 0;
+    Character character;
     
     public float HP
     {
@@ -36,15 +42,39 @@ public class Castle : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.F1))
+        GameObject[] objs = GameObject.FindGameObjectsWithTag(character.charData.findTag);
+        if (objs.Length == 0)
+            return;
+        float distance = 10f;
+        GameObject target = null;
+        foreach(var obj in objs)
         {
-            curHP -= 100;
+            float dis = Vector3.Distance(parent.transform.position, obj.transform.position);
+            target = obj;
+            distance = dis;
         }
-        hpImage.fillAmount = curHP / maxHp;
+        float targetPosition = Vector3.Distance(parent.transform.position, target.transform.position);
+        if (target == null)
+            return;
+        if(targetPosition < distance)
+        {
+            parent.transform.LookAt(target.transform);
+            Attack();
+        }
+    }
 
-        if(Input.GetKeyDown(KeyCode.F2))
+    void Attack()
+    {
+        attacTime += Time.deltaTime;
+        if(attacTime > attackDelay)
         {
-            hpImage.fillAmount += 20;
+            attacTime = 0;
+            StartCoroutine("BulletCreat");
         }
+    }
+    IEnumerator BulletCreat()
+    {
+        GameObject bullet = Instantiate(prefab, parent);
+        yield return new WaitForSeconds(1f);
     }
 }
