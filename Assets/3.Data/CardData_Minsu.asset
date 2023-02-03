@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4fa567d21858b44e970ef46c03e47a1, type: 3}
+  m_Name: CardData_Minsu
+  m_EditorClassIdentifier: 
+  character: {fileID: 3447071720242549967, guid: 6f9f2a1c3824bc84db90e7245b2df055, type: 3}
+  sprite: {fileID: -781311568, guid: 5055d0b646b5f6a4db4e189417d0bfdc, type: 3}
+  hp: 300
+  speed: 1
+  cost: 6
+  damage: 30
+  attDelay: 3
+  attRange: 1

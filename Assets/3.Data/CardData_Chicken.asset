@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4fa567d21858b44e970ef46c03e47a1, type: 3}
+  m_Name: CardData_Chicken
+  m_EditorClassIdentifier: 
+  character: {fileID: 2790765683803671638, guid: 6dabe5f290962a04683017cbeb34ef35, type: 3}
+  sprite: {fileID: -2138831166, guid: 5055d0b646b5f6a4db4e189417d0bfdc, type: 3}
+  hp: 100
+  speed: 4
+  cost: 3
+  damage: 15
+  attDelay: 1
+  attRange: 1

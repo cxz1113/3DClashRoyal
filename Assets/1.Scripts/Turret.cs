@@ -10,16 +10,11 @@ public class Turret : MonoBehaviour
     float attackDelay = 3f;
     float attacTime = 0;
     Character character;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
     {
-        //FindEnemy();
+        FindEnemy();
     }
 
     void FindEnemy()
@@ -35,10 +30,10 @@ public class Turret : MonoBehaviour
             target = obj;
             distance = dis;
         }
-        float targetPosition = Vector3.Distance(parent.transform.position, target.transform.position);
+        float targetPosition = Vector3.Distance(transform.position, target.transform.position);
         if (target == null)
             return;
-        if (targetPosition < distance)
+        if (targetPosition > distance)
         {
             parent.transform.LookAt(target.transform);
             Attack();
