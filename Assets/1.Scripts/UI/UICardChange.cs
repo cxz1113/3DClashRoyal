@@ -4,16 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 public class UICardChange : MonoBehaviour
 {
-    public List<Image> sprites = new List<Image>();
-    // Start is called before the first frame update
-    void Start()
+    public void OnDrop()
     {
-        
+        GetComponent<Image>().sprite = FindObjectOfType<UICardMove>().GetComponent<Image>().sprite;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PointClick()
     {
-        
+        GetComponent<Image>().sprite = null;
     }
 }

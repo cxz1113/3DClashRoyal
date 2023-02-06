@@ -17,12 +17,16 @@ public class UICard : MonoBehaviour, IDragHandler
     {
         if(targetImg != null)
         {
-            targetImg.color = new Color(1f, 1f, 1f, 1f / 255f);
+            targetImg.color = new Color(1f, 1f, 1f, 1f/255f);
         }
         targetImg = null;
-        FindObjectOfType<UICardChange>().GetComponent<Image>().sprite = GetComponent<Image>().sprite;
     }
 
+    /*public void ChangeImage()
+    {
+        changeIma = FindObjectOfType<UICardChange>().GetComponent<Image>();
+        changeIma.sprite = GetComponent<Image>().sprite;
+    }*/
     public void OnPointDown()
     {
         targetImg = FindObjectOfType<UICardMove>().GetComponent<Image>();

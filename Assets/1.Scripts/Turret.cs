@@ -14,7 +14,7 @@ public class Turret : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        FindEnemy();
+        //FindEnemy();
     }
 
     void FindEnemy()
