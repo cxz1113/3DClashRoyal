@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class UICard : MonoBehaviour, IDragHandler
 {
+    [SerializeField] Image image;
     Image targetImg = null;
     public void OnDrag(PointerEventData eventData)
     {
@@ -18,7 +19,12 @@ public class UICard : MonoBehaviour, IDragHandler
         if(targetImg != null)
         {
             targetImg.color = new Color(1f, 1f, 1f, 1f/255f);
-        }
+        }                
+    }
+
+    public void ClearImage()
+    {
+        targetImg.sprite = null;
         targetImg = null;
     }
 
