@@ -15,6 +15,7 @@ public class UIControllerMain : MonoBehaviour
 
     [HideInInspector]
     public string[] myArrayNums = new string[8];
+
     void Start()
     {
         for (int i = 0; i < myCardImages.Length; i++)
@@ -33,7 +34,7 @@ public class UIControllerMain : MonoBehaviour
         {
             MyCardSetting();
         }
-            btn.onClick.AddListener(OnButtonScene);
+        btn.onClick.AddListener(OnButtonScene);
     }
 
     public void Spawn()
@@ -52,10 +53,10 @@ public class UIControllerMain : MonoBehaviour
     public void DataSave()
     {
         string str = string.Empty;
-        for(int j = 0; j < myArrayNums.Length; j++)
+        for(int i = 0; i < myArrayNums.Length; i++)
         {
-            str += myArrayNums[j];
-            if(j != (myArrayNums.Length -1))
+            str += myArrayNums[i];
+            if(i != (myArrayNums.Length -1))
             {
                 str += ",";
             }
@@ -95,5 +96,31 @@ public class UIControllerMain : MonoBehaviour
                 }
             }
         }
+    }
+
+    public bool CardRedundancy(string name)
+    {
+        /*bool isCheck = true;
+        foreach(var item in myCardImages)
+        {
+            if(item.sprite.name == name)
+            {
+                isCheck = false;
+            }
+        }
+        return isCheck;*/
+
+        // 카드 중복 확인
+        bool isCheck = true;
+        for (int i = 0; i < myCardImages.Length - 1; i++)
+        {
+            if(myCardImages[i].sprite.name == name)
+            {
+                isCheck = false;
+                //return false;
+            }
+        }
+        //return true;
+        return isCheck;
     }
 }

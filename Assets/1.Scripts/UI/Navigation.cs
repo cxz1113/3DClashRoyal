@@ -33,9 +33,5 @@ public class Navigation : MonoBehaviour
                 count++;
             }
         }
-        else
-        {
-
-        }
     }
 }
