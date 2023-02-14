@@ -11,6 +11,7 @@ public class UIControllerMain : MonoBehaviour
     [SerializeField] private Transform parent;
     [SerializeField] private Button btn;
     [SerializeField] private Image[] myCardImages;
+    [SerializeField] private CardData[] cardDatas;
     public List<Sprite> sprites = new List<Sprite>();
 
     [HideInInspector]
@@ -39,10 +40,35 @@ public class UIControllerMain : MonoBehaviour
 
     public void Spawn()
     {
+        List<Image> myCardImages = new List<Image>();
         for (int i = 0; i < sprites.Count; i++)
         {
-            Instantiate(prefab, parent).sprite = sprites[i];
+            //Instantiate(prefab, parent).sprite = sprites[i];
+            Image image = Instantiate(prefab, parent);
+            image.sprite = sprites[i];
+            image.color = new Color(1f, 1f, 1f, 0.5f);
+            image.raycastTarget = false;
+            myCardImages.Add(image);
         }
+
+        for (int i = 0; i < cardDatas.Length; i++)
+        {
+            for (int j = 0; j < myCardImages.Count; j++)
+            {
+                if (cardDatas[i].Sprite.name == myCardImages[j].sprite.name)
+                {
+                    myCardImages[j].color = new Color(1f, 1f, 1f, 1f);
+                    myCardImages[j].raycastTarget = true;
+                    break;
+                }
+            }
+        }
+
+        /*foreach(var item in cardDatas)
+        {
+            Image image = Instantiate(prefab, parent);
+            image.sprite = item.Sprite;
+        }*/
     }
 
     void OnButtonScene()

@@ -16,8 +16,8 @@ public class NextCard : MonoBehaviour
         // 큐를 이용하여 카드 데이터 생성
         for(int i = 0; i < 5; i++)
         {
-            int rand = Random.Range(0, ControllerManager.Instance.dataCont.datas.Length);
-            CardData card = ControllerManager.Instance.dataCont.datas[rand];
+            int rand = Random.Range(0, ControllerManager.Instance.dataCont.pickupCDs.Count);
+            CardData card = ControllerManager.Instance.dataCont.pickupCDs[rand];
             nextCardGroup.Enqueue(card);
         }
         nextCard = nextCardGroup.Dequeue();
@@ -34,8 +34,8 @@ public class NextCard : MonoBehaviour
         if (nextCardGroup.Count >= 5)
             return;
 
-        int rand = Random.Range(0, ControllerManager.Instance.dataCont.datas.Length);
-        CardData card = ControllerManager.Instance.dataCont.datas[rand];
+        int rand = Random.Range(0, ControllerManager.Instance.dataCont.pickupCDs.Count);
+        CardData card = ControllerManager.Instance.dataCont.pickupCDs[rand];
         image.sprite = nextCard.Sprite;
         //costText.text = card.Cost.ToString();
         nextCardGroup.Enqueue(card);

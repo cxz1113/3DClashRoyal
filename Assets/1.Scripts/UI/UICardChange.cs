@@ -11,7 +11,6 @@ public class UICardChange : MonoBehaviour
     private void Start()
     {
         cont = FindObjectOfType<UIControllerMain>();
-
     }
 
     public void OnDrop()

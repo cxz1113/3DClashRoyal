@@ -9,5 +9,9 @@ public class ControllerManager : MonoBehaviour
     public CardController cardCont;
     public DataController dataCont;
     // Start is called before the first frame update
-    void Awake() => Instance = this;
+    void Awake()
+    {
+        Instance = this;
+        dataCont.Init();
+    }
 }

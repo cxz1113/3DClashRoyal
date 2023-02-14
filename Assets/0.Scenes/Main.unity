@@ -10380,6 +10380,15 @@ MonoBehaviour:
   - {fileID: 1655838270}
   - {fileID: 1329275738}
   - {fileID: 74721158}
+  cardDatas:
+  - {fileID: 11400000, guid: 2790963ad07765947a2abcc767914e98, type: 2}
+  - {fileID: 11400000, guid: 0f3960b9a4f632845952d6cca3268e03, type: 2}
+  - {fileID: 11400000, guid: 36d5f15f325c7a24db48457d7fe09beb, type: 2}
+  - {fileID: 11400000, guid: 3660a9701b7a76349b77d4c8ce8f83e1, type: 2}
+  - {fileID: 11400000, guid: 3c31e23e7de565f4787b8f495fe7fe0c, type: 2}
+  - {fileID: 11400000, guid: f9d7ceaeb74a6064cbe8616d177c321e, type: 2}
+  - {fileID: 11400000, guid: e1e346f53b1e90e41b3b803d8d74ffa0, type: 2}
+  - {fileID: 11400000, guid: e2e8284a531e46f438d131de443408aa, type: 2}
   sprites:
   - {fileID: 1057242908, guid: 5055d0b646b5f6a4db4e189417d0bfdc, type: 3}
   - {fileID: 185720028, guid: 5055d0b646b5f6a4db4e189417d0bfdc, type: 3}

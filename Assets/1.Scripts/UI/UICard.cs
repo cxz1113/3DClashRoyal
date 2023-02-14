@@ -19,13 +19,13 @@ public class UICard : MonoBehaviour, IDragHandler
         if(targetImg != null)
         {
             targetImg.color = new Color(1f, 1f, 1f, 1f/255f);
-        }                
+        }
     }
 
     public void ClearImage()
     {
-        targetImg.sprite = null;
         targetImg = null;
+
     }
 
     /*public void ChangeImage()
