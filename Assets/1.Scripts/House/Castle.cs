@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 
 public class Castle : MonoBehaviour
 {
@@ -26,6 +26,7 @@ public class Castle : MonoBehaviour
                 {
                     Time.timeScale = 0;
                     Debug.Log("Game Over!!");
+                    SceneManager.LoadScene("Main");
                 }                
             }
         }

@@ -90,6 +90,7 @@ public abstract class Character : MonoBehaviour
         // hp가 0일때 이벤트
         if(curHP <= 0)
         {
+
             Destroy(gameObject);
         }
     }
