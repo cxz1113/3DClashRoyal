@@ -4,38 +4,39 @@ using UnityEngine;
 using UnityEngine.UI;
 public class UICardChange : MonoBehaviour
 {
-    [SerializeField] private UIControllerMain cont;
+    private UIControllerMain cont;
+    [SerializeField] private Sprite defaultSprite;
     Image image;
     [HideInInspector] public int index;
 
     private void Start()
     {
         cont = FindObjectOfType<UIControllerMain>();
+        image = GetComponent<Image>();
     }
 
     public void OnDrop()
     {
         Sprite sprite = FindObjectOfType<UICardMove>().GetComponent<Image>().sprite;
 
-        if (cont.CardRedundancy(sprite.name))
+        if (sprite != null)
         {
-            GetComponent<Image>().sprite = FindObjectOfType<UICardMove>().GetComponent<Image>().sprite;
-            if (sprite != null)
+            if (cont.CardRedundancy(sprite.name))
             {
                 cont.myArrayNums[index] = sprite.name;
                 cont.DataSave();
-                GetComponent<Image>().sprite = sprite;
-                GetComponent<Image>().color = new Color(1f, 1f, 1f, 1f);
+                image.sprite = sprite;
+                image.color = new Color(1f, 1f, 1f, 1f);
                 FindObjectOfType<UICardMove>().GetComponent<Image>().sprite = null;
             }
-        }                    
+        }
     }
 
     public void PointClick()
     {
         cont.myArrayNums[index] = "-1";
         cont.DataSave();
-        GetComponent<Image>().sprite = null;
-        GetComponent<Image>().color = new Color(1f, 1f, 1f, 125f/255);
+        image.sprite = defaultSprite;
+        image.color = new Color(1f, 1f, 1f, 0.5f);
     }
 }

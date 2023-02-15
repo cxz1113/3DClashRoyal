@@ -592,6 +592,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e2e8284a531e46f438d131de443408aa, type: 2}
   - {fileID: 11400000, guid: 2790963ad07765947a2abcc767914e98, type: 2}
   - {fileID: 11400000, guid: 3c31e23e7de565f4787b8f495fe7fe0c, type: 2}
+  pickupCDs: []
 --- !u!4 &218798055
 Transform:
   m_ObjectHideFlags: 0

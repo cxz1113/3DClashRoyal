@@ -79,6 +79,7 @@ public class UIControllerMain : MonoBehaviour
     public void DataSave()
     {
         string str = string.Empty;
+
         for(int i = 0; i < myArrayNums.Length; i++)
         {
             str += myArrayNums[i];
@@ -87,7 +88,6 @@ public class UIControllerMain : MonoBehaviour
                 str += ",";
             }
         }
-
         PlayerPrefs.SetString("mycard", str);
     }
 
@@ -121,21 +121,12 @@ public class UIControllerMain : MonoBehaviour
                     myCardImages[i].color = new Color(1f, 1f, 1f, 0.5f);
                 }
             }
+            myArrayNums = strs;
         }
     }
 
     public bool CardRedundancy(string name)
     {
-        /*bool isCheck = true;
-        foreach(var item in myCardImages)
-        {
-            if(item.sprite.name == name)
-            {
-                isCheck = false;
-            }
-        }
-        return isCheck;*/
-
         // 카드 중복 확인
         bool isCheck = true;
         for (int i = 0; i < myCardImages.Length - 1; i++)
@@ -143,10 +134,8 @@ public class UIControllerMain : MonoBehaviour
             if(myCardImages[i].sprite.name == name)
             {
                 isCheck = false;
-                //return false;
             }
         }
-        //return true;
         return isCheck;
     }
 }

@@ -24,8 +24,8 @@ public class UICard : MonoBehaviour, IDragHandler
 
     public void ClearImage()
     {
+        targetImg.sprite = null;
         targetImg = null;
-
     }
 
     /*public void ChangeImage()

@@ -857,7 +857,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73751c573fdd5c246b0b67095fbfbac7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cont: {fileID: 0}
+  defaultSprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   index: 0
 --- !u!1 &132547927
 GameObject:
@@ -3087,7 +3087,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73751c573fdd5c246b0b67095fbfbac7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cont: {fileID: 0}
+  defaultSprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   index: 0
 --- !u!1 &468493342
 GameObject:
@@ -3811,7 +3811,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73751c573fdd5c246b0b67095fbfbac7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cont: {fileID: 0}
+  defaultSprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   index: 0
 --- !u!1 &597134139
 GameObject:
@@ -4331,7 +4331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73751c573fdd5c246b0b67095fbfbac7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cont: {fileID: 0}
+  defaultSprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   index: 0
 --- !u!1 &735413549
 GameObject:
@@ -5938,7 +5938,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73751c573fdd5c246b0b67095fbfbac7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cont: {fileID: 0}
+  defaultSprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   index: 0
 --- !u!1 &1059494196
 GameObject:
@@ -7559,7 +7559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73751c573fdd5c246b0b67095fbfbac7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cont: {fileID: 0}
+  defaultSprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   index: 0
 --- !u!1 &1394179132
 GameObject:
@@ -8194,7 +8194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73751c573fdd5c246b0b67095fbfbac7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cont: {fileID: 0}
+  defaultSprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   index: 0
 --- !u!1 &1507541198
 GameObject:
@@ -9033,7 +9033,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73751c573fdd5c246b0b67095fbfbac7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cont: {fileID: 0}
+  defaultSprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   index: 0
 --- !u!1 &1682528302
 GameObject:
