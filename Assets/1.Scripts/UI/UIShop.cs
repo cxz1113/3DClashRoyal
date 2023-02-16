@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+
 public struct GoldShop
 {
     public string title;
@@ -12,12 +13,13 @@ public class UIShop : MonoBehaviour
 {
     [SerializeField] private UIShopItem[] uIShopItems;
     List<GoldShop> goldShops = new List<GoldShop>();
-    [SerializeField] private Button goldBtn;
     [SerializeField] private TMP_Text myGoldTxt;
     [SerializeField] private TMP_Text treasureTxt;
+    UIControllerMain contUIMain = new UIControllerMain();
     private int myGold = 5000;
     int treasureCard = 5000;
-    float time = 0;
+
+
     public int MyGold
     {
         get { return myGold; }
@@ -47,7 +49,6 @@ public class UIShop : MonoBehaviour
         }
 
         myGoldTxt.text = string.Format($"{MyGold}");
-        goldBtn.onClick.AddListener(OnGoldLotto);
     }
 
     // Update is called once per frame
@@ -57,13 +58,22 @@ public class UIShop : MonoBehaviour
     }
 
     public void OnGoldLotto()
-    {       
-        if (MyGold < treasureCard)
-            return;
-        MyGold -= treasureCard;
+    {               
         int[] coinArray = { 1000, 2000, 3000, 5000, 10000 };
         int rand = Random.Range(0, coinArray.Length);
         Debug.Log(rand);
         MyGold += coinArray[rand];        
+    }
+
+    public void OnCardLotto()
+    {
+        Image image = FindObjectOfType<UIControllerMain>().GetComponent<Image>();
+        if (myGold < treasureCard)
+            return;
+
+        int rand = Random.Range(0, contUIMain.sprites.Count - 1);
+        image.sprite = contUIMain.sprites[rand];
+        image.color = new Color(1f, 1f, 1f, 1f);
+        MyGold -= treasureCard;
     }
 }

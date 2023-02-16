@@ -54,7 +54,7 @@ public class UIControllerMain : MonoBehaviour
         for (int i = 0; i < cardDatas.Length; i++)
         {
             for (int j = 0; j < myCardImages.Count; j++)
-            {
+            { 
                 if (cardDatas[i].Sprite.name == myCardImages[j].sprite.name)
                 {
                     myCardImages[j].color = new Color(1f, 1f, 1f, 1f);
