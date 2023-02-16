@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Linq;
 
 public struct GoldShop
 {
@@ -15,7 +16,7 @@ public class UIShop : MonoBehaviour
     List<GoldShop> goldShops = new List<GoldShop>();
     [SerializeField] private TMP_Text myGoldTxt;
     [SerializeField] private TMP_Text treasureTxt;
-    UIControllerMain contUIMain = new UIControllerMain();
+    [SerializeField] private UIControllerMain contUIMain;
     private int myGold = 5000;
     int treasureCard = 5000;
 
@@ -67,13 +68,36 @@ public class UIShop : MonoBehaviour
 
     public void OnCardLotto()
     {
-        Image image = FindObjectOfType<UIControllerMain>().GetComponent<Image>();
         if (myGold < treasureCard)
             return;
 
-        int rand = Random.Range(0, contUIMain.sprites.Count - 1);
-        image.sprite = contUIMain.sprites[rand];
-        image.color = new Color(1f, 1f, 1f, 1f);
+        List<Sprite> list = new List<Sprite>();
+
+        foreach(var item in contUIMain.sprites)
+        {
+            foreach(var card in contUIMain.cardDatas)
+            {
+                if(item.name == card.Sprite.name)
+                {
+                    list.Add(item);
+                }
+            }
+        }
+
+        for (int i = list.Count - 1; i >= 0; i--)
+        {
+            for(int j = 0; j < contUIMain.pickList.Count; j++)
+            {
+                if(list[i].name == contUIMain.pickList[j])
+                {
+                    list.RemoveAt(i);
+                }
+            }
+        }
+        int rand = Random.Range(0, list.Count);
+        Debug.Log($"{rand},{list[rand].name}");
+        contUIMain.pickList.Add(list[rand].name);
+        contUIMain.CardReFresh();
         MyGold -= treasureCard;
     }
 }

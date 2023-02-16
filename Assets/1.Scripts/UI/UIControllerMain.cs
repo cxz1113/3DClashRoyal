@@ -11,7 +11,7 @@ public class UIControllerMain : MonoBehaviour
     [SerializeField] private Transform parent;
     [SerializeField] private Button btn;
     [SerializeField] private Image[] myCardImages;
-    [SerializeField] private CardData[] cardDatas;
+    [SerializeField] public CardData[] cardDatas;
     public List<Sprite> sprites = new List<Sprite>();
 
     [HideInInspector]
@@ -38,9 +38,27 @@ public class UIControllerMain : MonoBehaviour
         btn.onClick.AddListener(OnButtonScene);
     }
 
+    public List<string> pickList = new List<string>();
+    public List<Image> mySpawnCardImages = new List<Image>();
+
+    public void CardReFresh()
+    {
+        for (int i = 0; i < mySpawnCardImages.Count; i++)
+        {
+            for(int j = 0; j < pickList.Count; j++)
+            {
+                if(mySpawnCardImages[i].sprite.name == pickList[j])
+                {
+                    mySpawnCardImages[i].color = new Color(1f, 1f, 1f, 1f);
+                    mySpawnCardImages[i].raycastTarget = true;
+                    break;
+                }
+            }
+        }
+    }
+
     public void Spawn()
     {
-        List<Image> myCardImages = new List<Image>();
         for (int i = 0; i < sprites.Count; i++)
         {
             //Instantiate(prefab, parent).sprite = sprites[i];
@@ -48,22 +66,24 @@ public class UIControllerMain : MonoBehaviour
             image.sprite = sprites[i];
             image.color = new Color(1f, 1f, 1f, 0.5f);
             image.raycastTarget = false;
-            myCardImages.Add(image);
+            mySpawnCardImages.Add(image);
+            
         }
 
-        for (int i = 0; i < cardDatas.Length; i++)
+        for (int i = 0; i < myCardImages.Length; i++)
         {
-            for (int j = 0; j < myCardImages.Count; j++)
-            { 
-                if (cardDatas[i].Sprite.name == myCardImages[j].sprite.name)
+            for (int j = 0; j < cardDatas.Length; j++)
+            {
+                if (myCardImages[i].sprite.name == cardDatas[j].Sprite.name)
                 {
-                    myCardImages[j].color = new Color(1f, 1f, 1f, 1f);
-                    myCardImages[j].raycastTarget = true;
+                    myCardImages[i].color = new Color(1f, 1f, 1f, 1f);
+                    myCardImages[i].raycastTarget = true;
                     break;
                 }
             }
         }
-
+        CardReFresh();
+        
         /*foreach(var item in cardDatas)
         {
             Image image = Instantiate(prefab, parent);
