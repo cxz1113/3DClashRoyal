@@ -77,8 +77,8 @@ public class UIShop : MonoBehaviour
         {
             foreach(var card in contUIMain.cardDatas)
             {
-                if(item.name == card.Sprite.name)
-                {
+                if(item.name != card.Sprite.name)
+                {                    
                     list.Add(item);
                 }
             }
